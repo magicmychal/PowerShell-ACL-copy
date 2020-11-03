@@ -7,7 +7,7 @@ How-to Use:
 2. Specify the $sampleFolder - it's a foder from which ACL will be copied 
  #>
 
-$rootFolder = "J:\01 - D&D"
+$rootFolder = "<ENTER PATH HERE>"
 $sampleFolder = "J:\test"
 
 $folders = Get-ChildItem $rootFolder |
@@ -26,7 +26,7 @@ Measure-Command {
             Write-Host "Setting up permissions on $_"_
             # 3. Replace the Get-Acl folder with the samplefolder as well as the patch. TODO: fix the issue here
             # TODO: Get-Acl returns error when using the $rootFolder variable 
-            Get-Acl "J:\test" | Set-Acl -Path "J:\01 - D&D\$_"
+            Get-Acl "J:\test" | Set-Acl -Path "<ENTER PATH HERE>\$_"
             Write-Host "All good on $_. Moving on"
             $successful.Add($_)
         } catch {

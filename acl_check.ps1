@@ -1,7 +1,7 @@
 ## This script copies the permission of selected $sampleFolder 
 ## and overwrites with the same permissions all of the main folders within the #rootFolder
 
-$rootFolder = "J:\01 - D&D"
+$rootFolder = "<ENTER PATH HERE>"
 $folders = Get-ChildItem $rootFolder |
         Where-Object {$_.PSIsContainer} |
         Foreach-Object {$_.Name}
